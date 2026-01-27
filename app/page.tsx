@@ -6,21 +6,20 @@ export default function ColorTest() {
   ];
 
   return (
-    <main className="min-h-screen bg-bg text-text p-6 md:p-12 font-sans transition-colors duration-300">
+    <main className="min-h-screen bg-bg text-text px-6 py-20  font-sans transition-colors duration-300">
       {/* Header & Theme Indicator */}
       <header className="max-w-4xl mx-auto flex justify-between items-end mb-12 border-b border-primary/20 pb-6">
         <div>
           <h1 className="text-5xl font-black text-primary tracking-tighter uppercase italic">
             TEST THEME
           </h1>
-          <p className="text-sm opacity-60 mt-2 font-mono">SYSTEM_STATUS: ACTIVE // THEME_TEST_MODE</p>
         </div>
 
         {/* Color Swatch Display */}
         <div className="flex gap-2">
-          <div className="w-8 h-8 rounded-full bg-bg border border-primary" title="Background"></div>
-          <div className="w-8 h-8 rounded-full bg-primary" title="Primary"></div>
-          <div className="w-8 h-8 rounded-full bg-text" title="Text"></div>
+          <div className="w-5 h-5 rounded-full bg-bg border border-primary" title="Background"></div>
+          <div className="w-5 h-5 rounded-full bg-primary" title="Primary"></div>
+          <div className="w-5 h-5 rounded-full bg-text" title="Text"></div>
         </div>
       </header>
 

@@ -1,9 +1,4 @@
 @import "tailwindcss";
-/* @import "./ver1.css";
-@import "./ver2.css";
-@import "./ver3.css"; */
-@import "./ver4.css";
-
 
 @theme {
   --color-themeGray-500: rgb(165, 165, 165);

@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+    --color-bg: hsl(var(--bg));
+    --color-text: hsl(var(--text));
+    --color-primary: hsl(var(--primary));
+}
+
+/*! --- Base Mode (Light/Dark) --- */
+:root, [data-mode="light"] {
+    --bg: 0 0% 100%;
+    --text: 0 0% 10%;
+}
+
+[data-mode="dark"] {
+    --bg: 0 0% 8%;
+    --text: 0 0% 95%;
+}
+/*! --- Base Mode (Light/Dark) --- */
+
+/* --- Primary Accents (เปลี่ยนเฉพาะสี primary) --- */
+:root { --primary: 24 100% 50%; } /* Default */
+
+[data-theme="blue"]   { --primary: 210 100% 60%; }
+[data-theme="green"]  { --primary: 140 70% 45%; }
+[data-theme="purple"] { --primary: 270 90% 65%; }
+[data-theme="cyan"]   { --primary: 190 100% 55%; }
+[data-theme="pink"]   { --primary: 330 90% 65%; }

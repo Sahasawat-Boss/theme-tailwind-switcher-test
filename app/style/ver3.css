@@ -13,59 +13,44 @@
     --primary: 220 90% 56%;
 }
 
+/* Black Theme (Pure Dark) */
+[data-theme="black"] {
+    --bg: 0 0% 8%;
+    --text: 0 0% 95%;
+    --primary: 220 90% 56%;
+}
+
 /* Blue Theme */
 [data-theme="blue"] {
-    --bg: 220 60% 10%;
-    --text: 0 0% 95%;
     --primary: 210 100% 60%;
-    
 }
 
 /* Green Theme */
 [data-theme="green"] {
-    --bg: 140 30% 10%;
-    --text: 0 0% 95%;
     --primary: 140 70% 45%;
 }
 
 /* Black Theme (Pure Dark) */
 [data-theme="black"] {
-    --bg: 0 0% 6%;
-    --text: 0 0% 95%;
     --primary: 220 90% 60%;
 }
 
 /* Orange Theme (Warm Tech) */
 [data-theme="orange"] {
-    --bg: 24 100% 97%;
-    --text: 20 80% 10%;
     --primary: 24 100% 50%;
 }
 
 /* Purple Theme (AI / Futuristic) */
 [data-theme="purple"] {
-    --bg: 260 60% 10%;
-    --text: 0 0% 95%;
     --primary: 270 90% 65%;
 }
 
 /* Cyan Theme (Neon Tech) */
 [data-theme="cyan"] {
-    --bg: 200 80% 8%;
-    --text: 0 0% 95%;
     --primary: 190 100% 55%;
 }
 
 /* Pink Theme (Creative AI) */
 [data-theme="pink"] {
-    --bg: 330 60% 10%;
-    --text: 0 0% 95%;
     --primary: 330 90% 65%;
 }
-
-
-/* Test Color Panel --------------*/
-.test {
-    color: rgb(255, 255, 255);
-}
-

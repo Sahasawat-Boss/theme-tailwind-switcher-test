@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./style/globals.css";
 import ThemeSwitcher from "@/Components/ThemeSwitcher";
+import DarkModeSwitcher from "@/Components2/DarkModeSwitcher";
+import ThemeSwitcher2 from "@/Components2/ThemeSwitche2";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,9 +39,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* Floating Switcher - วางไว้มุมขวาบน */}
-        <div className="fixed top-5 right-5 z-50">
-          <ThemeSwitcher />
+        <div className="fixed top-5 right-5 flex items-center justify-center gap-4 z-50">
+          {/* สลับสีพื้นหลัง */}
+          <DarkModeSwitcher />
+
+          {/* สลับสี Accent */}
+          <ThemeSwitcher2 />
         </div>
         {children}
       </body>
