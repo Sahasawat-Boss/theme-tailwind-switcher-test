@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@import "./test.css";
+
+
+@theme {
+  --color-themeGray-500: rgb(165, 165, 165);
+  --color-themeBlue-500: rgb(20, 58, 228);
+  --color-themeRed-500: rgb(255, 0, 0);
+  --color-themeGreen-500: rgb(61, 177, 7);
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+/* Test Color Panel --------------*/
+.test{
+  color: rgb(165, 165, 165);
+}
