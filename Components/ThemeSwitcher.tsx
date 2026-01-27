@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 const themes = [
-    "default", "blue", "green", "black",
+    "default","black", "blue", "green", 
     "orange", "purple", "cyan", "pink"
 ];
 
