@@ -34,7 +34,7 @@ export default function ColorTest() {
               <div className={`
                 max-w-[80%] p-4 rounded-2xl border-2
                 ${msg.role === 'user'
-                  ? 'bg-primary text-bg border-primary shadow-[4px_4px_0px_var(--color-text)]'
+                  ? 'bg-sec text-bg border-primary shadow-[4px_4px_0px_var(--color-text)]'
                   : 'bg-bg border-primary/30 text-text'}
               `}>
                 <p className="text-sm font-bold mb-1 uppercase opacity-50">

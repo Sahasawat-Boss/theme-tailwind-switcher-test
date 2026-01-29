@@ -4,10 +4,12 @@
     --color-bg: hsl(var(--bg));
     --color-text: hsl(var(--text));
     --color-primary: hsl(var(--primary));
+    --color-sec: hsl(var(--sec));
 }
 
 /*! --- Base Mode (Light/Dark) --- */
-:root, [data-mode="light"] {
+:root,
+[data-mode="light"] {
     --bg: 0 0% 100%;
     --text: 0 0% 10%;
 }
@@ -16,13 +18,33 @@
     --bg: 0 0% 8%;
     --text: 0 0% 95%;
 }
+
 /*! --- Base Mode (Light/Dark) --- */
 
 /* --- Primary Accents (เปลี่ยนเฉพาะสี primary) --- */
-:root { --primary: 24 100% 50%; } /* Default */
+:root {
+    --primary: 24 100% 50%;
+}
 
-[data-theme="blue"]   { --primary: 210 100% 60%; }
-[data-theme="green"]  { --primary: 140 70% 45%; }
-[data-theme="purple"] { --primary: 270 90% 65%; }
-[data-theme="cyan"]   { --primary: 190 100% 55%; }
-[data-theme="pink"]   { --primary: 330 90% 65%; }
+/* Default */
+
+[data-theme="blue"] {
+    --primary: 210 100% 60%;
+    --sec: 210 50% 30%;
+}
+
+[data-theme="green"] {
+    --primary: 140 70% 45%;
+}
+
+[data-theme="purple"] {
+    --primary: 270 90% 65%;
+}
+
+[data-theme="cyan"] {
+    --primary: 190 100% 55%;
+}
+
+[data-theme="pink"] {
+    --primary: 330 90% 65%;
+}
