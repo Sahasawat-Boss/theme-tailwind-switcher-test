@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@reference "../globals.css";
+
+@theme {
+  /* bg กับ text แยกสำหรับ Dark Light Mode *************************/
+  --color-bg: hsl(var(--bg));
+  --color-text: hsl(var(--text));
+
+  /* Theme *******************************************************/
+  --color-primary: hsl(var(--primary));
+  --color-secondary: hsl(var(--secondary));
+}
+
+/*! --- Base Mode (Light/Dark) --- */
+:root,
+[data-mode="light"] {
+  --bg: 0 0% 100%;
+  --card: 0 0% 100%;
+  --text: 0 0% 10%;
+}
+
+[data-mode="dark"] {
+  --bg: 0 0% 12%;
+  --card: 0 0% 15%;
+  --text: 0 0% 95%;
+}
+
+/*! --- Base Mode (Light/Dark) --- */
+
+/*! Default ------------------------*/
+/* Default Theme สีส้ม */
+:root {
+  --primary: 24 95% 53%;
+  --secondary: 32 95% 65%;
+
+  --gradient-primary: linear-gradient(135deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--secondary)) 100%);
+}
+
+/* Default ------------------------*/
+
+/*! Custom Theme ------------------------*/
+[data-theme="blue"] {
+  --primary: 210 100% 60%;
+  --secondary: 210 100% 80%;
+
+  --gradient-primary: linear-gradient(135deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--secondary)) 100%);
+}
+
+[data-theme="green"] {
+  --primary: 140 70% 45%;
+  --secondary: 140 70% 70%;
+
+  --gradient-primary: linear-gradient(135deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--secondary)) 100%);
+}
+
+[data-theme="purple"] {
+  --primary: 270 90% 65%;
+  --secondary: 270 90% 85%;
+
+  --gradient-primary: linear-gradient(135deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--secondary)) 100%);
+}
+
+[data-theme="cyan"] {
+  --primary: 190 100% 55%;
+  --secondary: 190 100% 85%;
+
+  --gradient-primary: linear-gradient(135deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--secondary)) 100%);
+}
+
+[data-theme="pink"] {
+  --primary: 330 90% 65%;
+  --secondary: 330 90% 80%;
+
+  --gradient-primary: linear-gradient(135deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--secondary)) 100%);
+}
+
+/* Preference Card Background */
+@utility bg-primary-light {
+  background-color: hsl(24 100% 96% / 0.2);
+}
+
+/* gradient ********************************************* */
+@utility gradient-primary {
+  background-color: hsl(var(--primary));
+  /* fallback */
+  background-image: var(--gradient-primary);
+}
+
+@utility scrollbar-primary {
+  @apply scrollbar scrollbar-h-1.5 scrollbar-thumb-neutral-500 scrollbar-thumb-rounded-md scrollbar-track-neutral-500/30 scrollbar-track-rounded-md scrollbar-w-1.5;
+  @apply scrollbar-hover:scrollbar-thumb-neutral-500/70 scrollbar-track-hover:scrollbar-track-neutral-500/35 scrollbar-active:scrollbar-thumb-neutral-500/90;
+}
+
+* {
+  @apply scrollbar-primary;
+}
+
+/* custom style datePicker this cannot set on MuiThemeProvider, datePicker is not included in theme system */
+.MuiPickersTextField-root {
+  & .MuiPickersInputBase-root {
+    @apply bg-white;
+  }
+
+  & .MuiPickersSectionList-root {
+    /* @apply !py-1 sm:!py-1.5; */
+  }
+
+  & .MuiPickersOutlinedInput-notchedOutline {
+    @apply border-border;
+  }
+
+  &:is(:hover, .Mui-focused) .MuiPickersOutlinedInput-notchedOutline {
+    @apply !border-primary;
+  }
+
+  & .Mui-error .MuiPickersOutlinedInput-notchedOutline {
+    @apply border-red-500;
+  }
+}
